@@ -1,0 +1,68 @@
+
+server:
+  port: 9002
+spring:
+  application:
+    name: gift-service
+  devtools:
+    livereload:
+      enabled: true
+  data:
+    mongodb:
+      uri: mongodb://rollin:1234@192.168.0.59:27017/gift
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/gift?serverTimezone=UTC&characterEncoding=UTF-8
+#    username: root
+#    password: 1234
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+#  servlet:
+#    multipart:
+#      max-file-size: 1MB
+#      max-request-size: 10MB
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQLInnoDBDialect
+#        format_sql: 'true'
+#    database-platform: org.hibernate.dialect.MySQL5Dialect
+#    hibernate:
+#      ddl-auto: update
+#      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#    show-sql: 'true'
+  mail:
+    # gmail-smtp ??
+    default-encoding: UTF-8
+    host : smtp.gmail.com
+    port : 587
+    # gmail ??
+    username : gudwodjssl2@gmail.com
+    # ? ????
+    password : ${JAVA_MAIL_PASSWORD}
+    properties :
+      mail :
+        smtp :
+          auth : true
+          starttls :
+            enable : true
+            required : true
+    protocol: smtp
+
+#jwt:
+#  secret_key: SECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEYSECRET_KEY
+#  expTime : 86400000
+
+#file: E:\rollingpapernative\Rollin_native\rollin\src\main\resources\static\img
+
+eureka:
+  client:
+  register-with-eureka: true
+  fetch-registry: true
+  service-url:
+    defaultZone: http://127.0.0.1:8761/eureka
+
+#mybatis:
+#  config-location: classpath:config/myBatis.xml
+
+
