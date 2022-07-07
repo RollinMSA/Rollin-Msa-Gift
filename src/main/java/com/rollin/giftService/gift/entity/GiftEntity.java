@@ -2,6 +2,8 @@ package com.rollin.giftService.gift.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
@@ -11,23 +13,15 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Data
-@Entity(name = "gifts")
+@Document(collection = "gifts")
 @Component
 public class GiftEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
     private Integer id;
-    @Column(name="name")
     private String name;
-    @Column(name="count")
     private Integer count;
-    @Column(name="price")
     private Integer price;
-    @Column(name="content")
     private String content;
-    @Column(name="img")
     private String img;
-    @Column(name="views")
     private Integer views;
 }
