@@ -10,6 +10,12 @@ spring:
   data:
     mongodb:
       uri: mongodb://rollin:1234@192.168.0.59:27017/gift
+#      host: 192.168.0.59
+#      port: 27017
+#      database: gift
+#      user: admin
+#      password: 1234
+#      authentication-database: admin
 #  datasource:
 #    url: jdbc:mysql://localhost:3306/gift?serverTimezone=UTC&characterEncoding=UTF-8
 #    username: root

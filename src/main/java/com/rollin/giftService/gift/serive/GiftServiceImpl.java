@@ -31,7 +31,7 @@ public class GiftServiceImpl implements GiftService {
     public List<GiftEntity> findGiftByName(String name) {
         log.info(name);
 
-        return giftRepository.findByNameLike("%"+name+"%");
+        return giftRepository.findByNameLike(name);
     }
 
     @Override
